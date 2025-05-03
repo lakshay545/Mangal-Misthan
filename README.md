@@ -1,4 +1,4 @@
-# Mangal-Mishthan
+# Mangal-Misthan
 A simple, responsive website for a traditional Indian sweet shop, allowing users to browse 60+ sweets, add to cart, and place orders via WhatsApp. Built to help local shops avoid third-party apps and take direct customer orders.
 # Team Member Details
 Name-Lakshay Sharma (Rollno-2401730250)
