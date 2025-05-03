@@ -6,4 +6,4 @@ Name-Lakshay Sharma (Rollno-2401730250)
 ,Name-Himanshu Gaur (Rollno-2401730207)
 ,Name-Tushar Kaushik  (Rollno-2401730231)
 # 🎥 Demo Video
-project_video.mp4
+https://github.com/lakshay545/Mangal-Mishthan/blob/c8bddbaac2e9133da75871d3773343a7a7abb818/project_video.mp4
