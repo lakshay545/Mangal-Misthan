@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mangal Mishthan - Premium Indian Sweet Shop</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="logo">
+            <h1>Mangal Mishthan</h1>
+            <p>Authentic Indian Sweets</p>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#menu">Menu</a></li>
+                <li><a href="#cart">Cart (<span id="cart-count">0</span>)</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#bulk-order">Bulk Order</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Home Section -->
+    <section id="home" class="section active">
+        <div class="hero-slider">
+            <div class="slide active">
+                <img src="dhoda-barfi.jpg" alt="Dhoda Barfi">
+                <div class="slide-content">
+                    <h2>Mangal Mishthan</h2>
+                    <p>Authentic Indian Sweets Since 1972</p>
+                    <div class="slide-buttons">
+                        <a href="#menu" class="btn">View Menu</a>
+                        <a href="#contact" class="btn">Contact Us</a>
+                    </div>
+                </div>
+            </div>
+            <div class="slide">
+                <img src="kaju-katli.jpg" alt="Kaju Katli">
+                <div class="slide-content">
+                    <h2>Mangal Mishthan</h2>
+                    <p>Premium Quality Sweets</p>
+                    <div class="slide-buttons">
+                        <a href="#menu" class="btn">View Menu</a>
+                        <a href="#contact" class="btn">Contact Us</a>
+                    </div>
+                </div>
+            </div>
+            <div class="slide">
+                <img src="MotichoorLaddu.webp" alt="Motichoor Laddu">
+                <div class="slide-content">
+                    <h2>Mangal Mishthan</h2>
+                    <p>Made with Traditional Recipes</p>
+                    <div class="slide-buttons">
+                        <a href="#menu" class="btn">View Menu</a>
+                        <a href="#contact" class="btn">Contact Us</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="home-content">
+            <div class="about-shop">
+                <div class="about-text">
+                    <h2>About Our Shop</h2>
+                    <p>Mangal Mishthan has been serving authentic Indian sweets since 1972, using traditional recipes passed down through generations. Our sweets are made with pure ingredients and prepared with love.</p>
+                    <div class="quality-points">
+                        <p><i class="fas fa-check"></i> 100% Pure Desi Ghee</p>
+                        <p><i class="fas fa-check"></i> Fresh Ingredients Daily</p>
+                        <p><i class="fas fa-check"></i> Traditional Recipes</p>
+                        <p><i class="fas fa-check"></i> Hygienic Preparation</p>
+                        <p><i class="fas fa-check"></i> Handcrafted with Care</p>
+                        <p><i class="fas fa-check"></i> Family Owned Business</p>
+                    </div>
+                </div>
+                
+                <div class="address-box">
+                    <div class="address-content">
+                        <h3>Visit Us</h3>
+                        <p><i class="fas fa-map-marker-alt"></i> Katla Bazar, Rewari, Haryana</p>
+                        <p><i class="fas fa-phone"></i> +91 9876543210</p>
+                        <p><i class="fas fa-clock"></i> Open: 9AM - 9PM (Daily)</p>
+                        <p><i class="fas fa-car"></i> Ample Parking Available</p>
+                        <p><i class="fas fa-utensils"></i> Special Orders Welcome</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Menu Section -->
+    <section id="menu" class="section">
+        <div class="page-banner">
+            <img src="milk-cake.webp" alt="Indian Sweets">
+        </div>
+        <h2>Our Sweet Menu</h2>
+        <div class="search-container">
+            <input type="text" id="searchBar" placeholder="Search sweets...">
+        </div>
+        <div class="menu-items" id="menu-items"></div>
+    </section>
+
+    <!-- Cart Section -->
+    <section id="cart" class="section">
+        <div class="page-banner">
+            <img src="Badam-Katli.jpg" alt="Indian Sweets">
+        </div>
+        <h2>Your Cart</h2>
+        <div id="cart-items"></div>
+        <div class="cart-total">
+            <h3>Subtotal: ₹<span id="cart-total-price">0</span></h3>
+            <h3>GST (5%): ₹<span id="gst-amount">0</span></h3>
+            <h3>Delivery Charge: ₹<span id="delivery-charge">0</span></h3>
+            <h3>Total: ₹<span id="grand-total">0</span></h3>
+            <button class="btn" id="proceed-to-pay-btn">Proceed to Pay</button>
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section id="about" class="section">
+        <div class="page-banner">
+            <img src="milk-cake.webp" alt="Indian Sweets">
+        </div>
+        <h2>About Mangal Mishthan</h2>
+        <p>Mangal Misthan is a trusted name in the realm of authentic Indian sweets, serving happiness for over 50 years.
+            We specialize in crafting more than 60 varieties of authentic Indian sweets, including classics like Kaju Katli, Gulab Jamun, Rasgulla, and Besan Laddoo.
+            Our mission is to bring the true flavors of India to every celebration, big or small.
+            At Mangal Misthan, we believe that quality is non-negotiable — we use only premium ingredients to create sweets that are rich, fresh, and full of tradition.
+            From festive gift boxes to custom party orders, we offer a wide range of services to meet every sweet craving.
+            We also ensure safe and hygienic preparation following the highest food safety standards.
+            Now, with our online platform, customers can easily explore and order their favorite sweets from the comfort of their homes.
+            We offer direct WhatsApp ordering, easy online payments, and real-time location tracking using Google Maps.
+            Our goal is to deliver not just sweets, but unforgettable memories, wrapped in authentic flavors.
+            Choose Mangal Misthan — where every sweet tells a story, and every story tastes sweeter.</p>
+    </section>
+
+    <!-- Contact Us Section -->
+    <section id="contact" class="section">
+        <div class="page-banner">
+            <img src="kaju-pista-roll.webp" alt="Indian Sweets">
+        </div>
+        <h2>Contact Us</h2>
+        <div class="contact-container">
+            <div class="contact-info">
+                <h3>Get in Touch</h3>
+                <p><i class="fas fa-map-marker-alt"></i> Katla Bazar, Rewari, Haryana</p>
+                <p><i class="fas fa-phone"></i> +91 9896009903</p>
+                <p><i class="fas fa-envelope"></i> mangalmishthan@gmail.com</p>
+                <p><i class="fas fa-clock"></i> Open: 9AM - 9PM (Daily)</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+            <form id="contact-form">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" required></textarea>
+                <button type="submit" class="btn">Submit</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Bulk Order Section -->
+    <section id="bulk-order" class="section">
+        <div class="page-banner">
+            <img src="dhoda-barfi.jpg" alt="Indian Sweets">
+        </div>
+        <h2>Bulk Orders</h2>
+        <p>Mangal Misthan also specializes in bulk orders for weddings, corporate events, and festive celebrations.
+            We offer customized sweet boxes and large quantity deliveries, ensuring top quality and timely service for every occasion.
+            Bring a touch of authentic sweetness to your special events with Mangal Misthan.</p>
+    </section>
+
+    <!-- Sweet Details Modal -->
+    <div id="sweetModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2 id="modalTitle"></h2>
+            <p id="modalDescription"></p>
+            <p id="modalPrice"></p>
+            <div class="quantity-control">
+                <label for="quantity">Quantity:</label>
+                <input type="number" id="quantity" min="1" value="1">
+            </div>
+            <p>Total Price: ₹<span id="totalPrice"></span></p>
+            <button class="btn" id="add-to-cart-btn">Add to Cart</button>
+        </div>
+    </div>
+
+    <!-- Checkout Modal -->
+    <div id="checkoutModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Checkout</h2>
+            <form id="checkout-form">
+                <label for="customerName">Name:</label>
+                <input type="text" id="customerName" required>
+                <label for="customerPhone">Phone:</label>
+                <input type="tel" id="customerPhone" required>
+                <div class="location-section">
+                    <h3>Delivery Location</h3>
+                    <div class="location-options">
+                        <button type="button" class="location-btn" id="current-location-btn">
+                            <i class="fas fa-location-arrow"></i> Use My Location
+                        </button>
+                        <span class="or-divider">OR</span>
+                        <button type="button" class="location-btn" id="map-location-btn">
+                            <i class="fas fa-map-marker-alt"></i> Select on Map
+                        </button>
+                    </div>
+                    <div id="map-container">
+                        <div id="map"></div>
+                        <div class="map-search">
+                            <input type="text" id="locationSearch" placeholder="Search location...">
+                            <button type="button" id="search-btn"><i class="fas fa-search"></i></button>
+                        </div>
+                        <p>Selected Address: <span id="selected-address">Not selected</span></p>
+                        <p>Distance from Shop: <span id="distance">0 km</span></p>
+                        <p>Delivery Charge: ₹<span id="checkout-delivery">0</span></p>
+                        <input type="hidden" id="customerLat">
+                        <input type="hidden" id="customerLng">
+                    </div>
+                </div>
+                <label for="specialInstructions">Special Instructions:</label>
+                <textarea id="specialInstructions"></textarea>
+                <div class="order-summary">
+                    <h3>Order Summary</h3>
+                    <div id="checkout-items"></div>
+                    <p>Subtotal: ₹<span id="checkout-subtotal">0</span></p>
+                    <p>GST (5%): ₹<span id="checkout-gst">0</span></p>
+                    <p>Delivery Charge: ₹<span id="checkout-delivery-display">0</span></p>
+                    <p class="total">Total: ₹<span id="checkout-total">0</span></p>
+                </div>
+                <button type="button" class="btn" id="proceed-to-payment-btn">
+                    Proceed to Payment
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Payment Modal -->
+    <div id="paymentModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Payment Options</h2>
+            <div class="payment-options">
+                <div class="payment-option">
+                    <input type="radio" id="cash-on-delivery" name="payment" value="cash-on-delivery" checked>
+                    <label for="cash-on-delivery"><i class="fas fa-money-bill-wave"></i> Cash on Delivery</label>
+                </div>
+                <div class="payment-option">
+                    <input type="radio" id="upi" name="payment" value="upi">
+                    <label for="upi"><i class="fas fa-mobile-alt"></i> UPI Payment</label>
+                </div>
+            </div>
+            <div class="order-summary">
+                <h3>Order Summary</h3>
+                <div id="payment-items"></div>
+                <p>Subtotal: ₹<span id="payment-subtotal">0</span></p>
+                <p>GST (5%): ₹<span id="payment-gst">0</span></p>
+                <p>Delivery Charge: ₹<span id="payment-delivery">0</span></p>
+                <p class="total">Grand Total: ₹<span id="payment-total">0</span></p>
+            </div>
+            <button class="btn" id="confirm-order-btn">Confirm Order</button>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
