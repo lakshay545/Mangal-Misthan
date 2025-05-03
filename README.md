@@ -7,3 +7,5 @@ Name-Lakshay Sharma (Rollno-2401730250)
 ,Name-Tushar Kaushik  (Rollno-2401730231)
 # 🎥 Demo Video
 https://github.com/lakshay545/Mangal-Mishthan/blob/c8bddbaac2e9133da75871d3773343a7a7abb818/project_video.mp4
+# View Detailed Project Report
+https://github.com/lakshay545/Mangal-Mishthan/blob/0a7fec0c86ee5e5bb002f4383bcfa8631208fad2/minor_project_report.pdf
